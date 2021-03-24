@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://coolors.co/assets/css/dist/style.min.css?v=25">
+<link rel="stylesheet" href="https://coolors.co/assets/vendor/dist/vendor.min.css?v=1">
+
+<link rel="stylesheet" href="https://coolors.co/assets/icon/css/style.css?v=1">
+<link rel="stylesheet" href="style2.css">
+  </head>
+  <body>
+
+		<h1>Buttons</h1>
+		<button type="button" onclick="myFunction()">change background color</button>
+		<button type="button" onclick="changeBack()">revert bg color</button>
+
+
+
+
+<br>
+<br>
+
+<button class="btnBlue"     onclick="changeColor('blue')">Blue</button>
+<button class="btnRed"      onclick="changeColor('red')">Red</button>
+<button class="btnGreen"    onclick="changeColor('green')">Green</button>
+<button class="btnOrange"   onclick="changeColor('orange')">Orange</button>
+<button class="btnYellow"   onclick="changeColor('yellow')">Yellow</button>
+<button class="btnPink"     onclick="changeColor('pink')">Pink</button>
+<button class="btnPurple"   onclick="changeColor('purple')">Purple</button>
+<button class="btnBrown"    onclick="changeColor('brown')">Brown</button>
+<button class="btnBlack"    onclick="changeColor('black')">Black</button>
+<button class="ui-toggle-11"     onclick="changeColor('gray')">Gray</button>
+
+<br>
+<br>
+<br>
+<h1>Forms</h1>
+
+<p>Pre-Populated Drop-Down Lists</p>
+<select name="color"> <option value="tan">Windswept Sand Dune</option> <option value="green">Lush Forest</option> <option value="blue">Turbulent Waters</option> <option value="black">Deep Night</option> </select>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<p>Free-Form Text Areas</p>
+<textarea rows="3" cols="60" placeholder="Enter Text Here"> </textarea> <br> <textarea rows="3" cols="60"> Enter Text Here </textarea>
+
+<br>
+<br>
+<br>
+
+<p>What is your favorite web technology?</p> <br><input type="text" list="web_technologies" name="web_technology"> <datalist id="web_technologies"> <option value="HTML"> <option value="CSS"> <option value="JavaScript"> <option value="jQuery"> <option value="PHP"> <option value="Bootstrap"> </datalist>
+
+
+
+
+<br>
+<br>
+<a href="index.html">Home</a>
+    <script>
+			function myFunction() {
+				document.body.style.backgroundColor = "yellow";
+			}
+			
+
+			function changeBack() {
+				document.body.style.backgroundColor = "white";
+			}
+		
+
+			function changeColor(colorName) {
+    document.body.style.background = colorName;
+}
+
+			const colorButtons = [...document.querySelectorAll('.colorButton')];
+			document.addEventListener('click', e => {
+				if (!colorButtons.includes(e.target)) return;
+				document.body.style.background = e.target.textContent;
+			});
+		</script>
+  </body>
+</html>
